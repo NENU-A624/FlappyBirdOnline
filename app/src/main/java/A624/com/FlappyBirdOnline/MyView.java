@@ -17,7 +17,7 @@ public class MyView extends View implements Runnable {
     Column column2;
 
     //鸟类
-    Bird bird;
+    static Bird bird ;
     //画笔
     Paint paint = new Paint();
 
@@ -92,6 +92,12 @@ public class MyView extends View implements Runnable {
 
     }
 
+    public static int returnbirdx(){
+        return bird.x;
+    }
+    public static int returnbirdy(){
+        return bird.y;
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -143,6 +149,5 @@ public class MyView extends View implements Runnable {
 
 
     }
-
 
 }

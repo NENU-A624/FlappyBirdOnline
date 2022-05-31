@@ -1,5 +1,6 @@
 package A624.com.FlappyBirdOnline;
 
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -105,6 +106,5 @@ public class Bird {
     public boolean pass(Column column1, Column column2) {
         return column1.columX == x || column2.columX == x;
     }
-
 
 }
