@@ -1,18 +1,11 @@
 package xiaomeng.com.xsngame;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.Region;
-import android.os.Build;
-import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 public class MyView extends View implements Runnable {
     Context context;
@@ -24,7 +17,7 @@ public class MyView extends View implements Runnable {
     Column column2;
 
     //鸟类
-    Bird bird;
+    static Bird bird ;
     //画笔
     Paint paint = new Paint();
 
@@ -99,6 +92,12 @@ public class MyView extends View implements Runnable {
 
     }
 
+    public static int returnbirdx(){
+        return bird.x;
+    }
+    public static int returnbirdy(){
+        return bird.y;
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -150,6 +149,5 @@ public class MyView extends View implements Runnable {
 
 
     }
-
 
 }
