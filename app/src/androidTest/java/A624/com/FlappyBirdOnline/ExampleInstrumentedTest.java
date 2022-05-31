@@ -1,4 +1,4 @@
-package xiaomeng.com.xsngame;
+package A624.com.FlappyBirdOnline;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

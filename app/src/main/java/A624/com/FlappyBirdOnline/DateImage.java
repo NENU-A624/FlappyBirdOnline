@@ -1,7 +1,8 @@
-package xiaomeng.com.xsngame;
+package A624.com.FlappyBirdOnline;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
 
 public class DateImage {
 

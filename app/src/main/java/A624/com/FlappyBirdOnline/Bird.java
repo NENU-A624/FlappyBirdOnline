@@ -1,4 +1,4 @@
-package xiaomeng.com.xsngame;
+package A624.com.FlappyBirdOnline;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,23 +11,24 @@ public class Bird {
 
     int x;
     int y;
-
     int width;
     int height;
     Bitmap brid;
 
-    //初始索引
+    /**
+     * 属性列表
+     * 1.初始索引
+     * 2.重力加速度
+     * 3.间隔时间
+     * 4.初始速度 （pix/s）
+     * 5.当前时刻速度
+     * 6.运动距离
+     */
     int index;
-
-    //重力加速度
     int g;
-    //间隔时间
     double t;
-    //初始速度 像素/秒
     double v0;
-    //当前时刻的速度
     double vt;
-    //运动的距离
     double s;
 
     public Bird(int x, int y) {

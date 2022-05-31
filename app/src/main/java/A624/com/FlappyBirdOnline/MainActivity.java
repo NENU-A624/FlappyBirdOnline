@@ -1,4 +1,4 @@
-package xiaomeng.com.xsngame;
+package A624.com.FlappyBirdOnline;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

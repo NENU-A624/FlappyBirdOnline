@@ -1,8 +1,7 @@
-package xiaomeng.com.xsngame;
+package A624.com.FlappyBirdOnline;
 
 import android.app.Application;
 import android.content.Context;
-import android.graphics.Paint;
 import android.view.WindowManager;
 
 public class MyApplication extends Application {
