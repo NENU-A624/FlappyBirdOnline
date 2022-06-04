@@ -13,7 +13,7 @@ public class Client {
 
     public static void main(String[] args){
         while (!connection_state) {
-            connect();
+            connect();                          //调用下面的方法向服务器请求连接
             try {
                 Thread.sleep(3000);
             }catch (Exception e){
@@ -57,10 +57,10 @@ class Client_listen implements Runnable{
         this.ois = ois;
     }
     @Override
-    public void run(){
+    public void run(){      //接收并实时更新鸟的位置直接绘制不会了，不会解析json和绘制
         try {
             while (true){
-                System.out.println(ois.readObject());
+
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -86,7 +86,7 @@ class Client_send implements Runnable{
                 JSONObject object = new JSONObject();
                 object.put("鸟的x坐标",X);
                 object.put("鸟的y坐标",Y);
-                oos.writeObject(object);
+                oos.writeObject(object);                            //向服务器发送位置坐标
                 oos.flush();
             }
         }catch (Exception e){

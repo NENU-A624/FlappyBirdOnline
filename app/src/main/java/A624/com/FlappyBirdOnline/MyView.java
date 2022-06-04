@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
+
 public class MyView extends View implements Runnable {
     Context context;
     //地板类
@@ -20,6 +21,8 @@ public class MyView extends View implements Runnable {
     static Bird bird ;
     //画笔
     Paint paint = new Paint();
+    //客户端
+    Client client = new Client();
 
     int startButtonX;
     int startButtonY;
@@ -122,6 +125,7 @@ public class MyView extends View implements Runnable {
 
     @Override
     public void run() {
+        client.main(null);    //连接服务器
         while (true) {
             try {
                 Thread.sleep(10);
