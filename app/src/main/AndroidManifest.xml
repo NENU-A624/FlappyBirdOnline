@@ -21,8 +21,7 @@
         <service
             android:name="A624.com.FlappyBirdOnline.MusicUtil"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"/>
     </application>
 
 </manifest>

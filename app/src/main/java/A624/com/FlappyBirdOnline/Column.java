@@ -7,54 +7,71 @@ import android.graphics.Paint;
 import java.util.Random;
 
 /**
- * 管子类
+ * 管道实体类
+ *
+ * @author NENU-A624
  */
-
 public class Column {
-
-    //管子的坐标
-    int columX;
-    int columYs;
-    int columYx;
-    //管子的宽高
+    /**
+     * 基本参数
+     * 1.管道横坐标
+     * 2.下端开口纵坐标
+     * 3.上端开口纵坐标
+     * 4.像素宽
+     * 5.像素高
+     * 6.随机数
+     */
+    int columnX;
+    int columnYs;
+    int columnYx;
     int width;
     int height;
-
-    //创建随机数
     Random random = new Random();
 
+    /**
+     * 构造函数
+     * 初始化管道的基本状态
+     *
+     * @param x1 横坐标
+     */
     public Column(int x1) {
         width = DateImage.sg1.getWidth();
         height = DateImage.sg1.getHeight();
-        columX = x1;
-        columYs = -(height / 2) + (getRandom(-35, 30)) * 10;
-        columYx = height + columYs + 250;
+        columnX = x1;
+        columnYs = -(height / 2) + (getRandom(-35, 30)) * 10;
+        columnYx = height + columnYs + 250;
         move();
     }
 
+    /**
+     * 管道绘制函数
+     */
     public void paint(Canvas canvas, Paint paint) {
-
-        canvas.drawBitmap(DateImage.sg1, columX, columYs, paint);
-        canvas.drawBitmap(DateImage.sg2, columX, columYx, paint);
-
-
+        canvas.drawBitmap(DateImage.sg1, columnX, columnYs, paint);
+        canvas.drawBitmap(DateImage.sg2, columnX, columnYx, paint);
     }
 
+    /**
+     * 管道移动生成处理函数
+     */
     public void move() {
-
-        columX -= 2;
-        if (columX < -width) {
-            columX = MyApplication.width + 20;
-            columYs = -(height / 2) + (getRandom(-30, 30)) * 10;
-            columYx = height + columYs + 250;
+        columnX -= 2;
+        if (columnX < -width) {
+            columnX = MyApplication.width + 20;
+            columnYs = -(height / 2) + (getRandom(-30, 30)) * 10;
+            columnYx = height + columnYs + 250;
         }
-
     }
 
+    /**
+     * 随机数生成函数
+     *
+     * @param min 最小值
+     * @param max 最大值
+     * @return 随机数
+     */
     public int getRandom(int min, int max) {
-        int s = random.nextInt(max) % (max - min + 1) + min;
-        return s;
-
+        return random.nextInt(max) % (max - min + 1) + min;
     }
 
 }

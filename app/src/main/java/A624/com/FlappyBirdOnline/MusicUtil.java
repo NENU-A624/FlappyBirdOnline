@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-
+/**
+ * 音频资源类
+ *
+ * @author NENU-A624
+ */
 public class MusicUtil extends Service {
 
     private MediaPlayer mediaPlayer;
@@ -19,15 +23,17 @@ public class MusicUtil extends Service {
         return null;
     }
 
-    //Service被创建时的回调方法
+    /**
+     * Service创建时回调方法
+     */
     @Override
     public void onCreate() {
         super.onCreate();
-
-
     }
 
-    //Service被启动时回调方法
+    /**
+     * Service启动时回调方法
+     */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Bundle b = intent.getExtras();
@@ -39,7 +45,7 @@ public class MusicUtil extends Service {
     }
 
     /**
-     * Service被停止后调用
+     * Service停止时回调方法
      */
     @Override
     public void onDestroy() {
