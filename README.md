@@ -5,7 +5,7 @@ Flappy bird -- which game was once popular all over the world as a leisure type,
 
 - lbh123q
 
-  Email: 3097086700@qq.com
+  Email: 508278769@qq.com
 
   The author who major writes the Interaction between client and server. Completes the key technical issues.
 
@@ -31,10 +31,9 @@ Flappy bird -- which game was once popular all over the world as a leisure type,
 
 2. Connection Progress
 
-   ![交互流程图](E:/23302/%E4%BA%A4%E4%BA%92%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+   ![交互流程图](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/README/%E4%BA%A4%E4%BA%92%E6%B5%81%E7%A8%8B%E5%9B%BE.png?token=GHSAT0AAAAAABUMVJQVSZ6RZY3SMFR2I6NMYU4EAJQ)
 
 ## Deployment project
-
 
 
 
