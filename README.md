@@ -75,17 +75,22 @@ It's very easy. There's nothing to say.
      - Jdk-1.8.0_291 & Jdk-16
      - Sdk default 8
      - Maven 3
+   
 2. Deploy environment
 
    - Client
 
      - Android System Device (or virtual device), for API 29 above.
+     
      - Google play service
-- Server
-  
-  - Windows 10/ Linux (best for centOS7)
+     
+   - Server
+
+     - Windows 10/ Linux (best for centOS7)
+	
      - Apache Tomcat Server 9.0.45 / Nginx 1.20.2
-  - Docker 3.9
+
+     - Docker 3.9
 
 
 
