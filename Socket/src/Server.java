@@ -7,23 +7,25 @@ import java.net.Socket;
 
 
 public class Server {
-    public static void main(String[] args){
+    static  ServerSocket serverSocket;
+    public static void main(String[] args) throws Exception{
         try {
-            //System.out.println("Socket 准备就绪...");
-            ServerSocket serverSocket = new ServerSocket(9999);  //创建等待连接
-            while (true){
-                Socket socket = serverSocket.accept();         //接收客户端连接
+            serverSocket = new ServerSocket(20000);  //创建等待连接
+            System.out.println("创建成功等待连接");
+            Socket socket = null;
+            boolean flag = true;
+            while (flag){
+                socket = serverSocket.accept();         //接收客户端连接
                 ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
                 ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
                 new Thread(new Server_listen(socket)).start();
                 new Thread(new Server_send(socket)).start();
             }
+            System.out.println("OK");
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
-
 }
 class Server_listen implements Runnable {
     private Socket socket;
@@ -74,8 +76,5 @@ class Server_listen implements Runnable {
         }
     }
 
-    //json的  接收处理和发送
-    //解析坐标   重绘展示鸟
-    // 关闭连接不是很理解
 
 

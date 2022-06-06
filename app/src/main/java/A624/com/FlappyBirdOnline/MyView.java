@@ -115,13 +115,6 @@ public class MyView extends View implements Runnable {
         canvas.drawText("分数 ：" + score, 200, 200, paint);
     }
 
-    public static int returnbirdx(){
-        return bird.x;
-    }
-    public static int returnbirdy(){
-        return bird.y;
-    }
-
     /**
      * 点击事件处理函数
      * 处理开始、重新开始以及小鸟跳跃
@@ -155,19 +148,21 @@ public class MyView extends View implements Runnable {
      */
     @Override
     public void run() {
-        //client.main(null);    //连接服务器
+        client.connect();
         while (true) {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            if(!client.connection_state){client.reconnect();}
             //开始且未结束，调用所有对象的移动方法
             if (isStart && !isFail) {
                 ground.move();
                 column1.move();
                 column2.move();
                 bird.move();
+
                 //碰撞检测
                 if (bird.hit(column1, column2)) {
                     isFail = true;
