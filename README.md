@@ -11,7 +11,7 @@ Flappy bird -- which game was once popular all over the world as a leisure type,
 
 The game is very simple to play, as those traditional versions, you just need to click on the screen, and operate the bird to fly over, more fittingly, go through the pipes which appear from upper and lower edges of the screen to make a higher score. The difference is that this is not a single game, you can control your own birds and compete with other players, actually. But, you must ensure that your client(a real phone or virtual device) can connect to a server  device that deploys the server side of the project, otherwise the game will **never** start, just like the Genshin Impact!(Haha~, this is a little guilty treasure of developers. I believe you won't mind, right?)
 
-![Genshin Impact](E:/23302/CloudLake/FlappyBirdOnline/README/Genshin%20Impact.png)
+![Genshin Impact](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/README/Genshin%20Impact.png)
 
 ## Members(In lexicographic order, name from Github):
 
@@ -53,7 +53,7 @@ If you don't feel noisy, you can add the audio resource class reserved in the pr
 
 But I prefer to be a silent bird:)
 
-![cheems](E:/23302/CloudLake/FlappyBirdOnline/README/cheems.png)
+![cheems](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/README/cheems.png)
 
 ------
 
