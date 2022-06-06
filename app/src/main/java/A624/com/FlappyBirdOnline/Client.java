@@ -7,6 +7,10 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * 客户端工具类
+ * @author NENU-A624
+ */
 public class Client {
     private static Socket socket;
     public static boolean connection_state = false;
@@ -22,6 +26,10 @@ public class Client {
         }
     }
 
+    /**
+     * 连接方法
+     * 此处指定服务器端的ip及端口
+     */
     private static void connect(){
         try {
             socket = new Socket("Server的ip", 00000);
@@ -36,6 +44,10 @@ public class Client {
             connection_state = false;
         }
     }
+
+    /**
+     * 重新连接方法
+     */
     public static void reconnect(){
         while (!connection_state){
             System.out.println("正在尝试重新链接.....");
