@@ -31,11 +31,45 @@ Flappy bird -- which game was once popular all over the world as a leisure type,
 
 2. Connection Progress
 
-   ![交互流程图](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/README/%E4%BA%A4%E4%BA%92%E6%B5%81%E7%A8%8B%E5%9B%BE.png?token=GHSAT0AAAAAABUMVJQVSZ6RZY3SMFR2I6NMYU4EAJQ)
+   ![交互流程图](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/README/%E4%BA%A4%E4%BA%92%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
-## Deployment project
+## Develop and deploy project
 
+1. Develop environment
 
+   - Android Studio (Client & FlappyBirdOnline)
+     - Android Gradle Plugin Version 7.0.4
+     - Gradle Version 7.0.2
+     - Compile Sdk Version 29
+     - Min Sdk Version 21
+     - Target Sdk Version 29
+   - Intellij Idea (Socket Server)
+     - Jdk-1.8.0_291 & Jdk-16
+     - Sdk default 8
+     - Maven 3
+
+2. Deploy environment
+
+   - Client
+
+     - Android System Device (or virtual device), for API 29 above.
+     - Google play service
+
+   - Server
+
+     - Windows 10/ Linux (best for centOS7)
+
+     - Apache Tomcat Server 9.0.45 / Nginx 1.20.2
+     - Docker 3.9
+
+## Project develop progress
+
+1. Project establishment 2022.4.5 
+2. Gathering materials 2022.4
+3. Start programming 2022.5
+4. Client complete 2022.5.26
+5. Server complete 2022.6.1
+6. End project 2022.6.6
 
 
 
