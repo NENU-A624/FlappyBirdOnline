@@ -8,23 +8,24 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-    private static Socket socket;
-    public static boolean connection_state = false;
+    private  Socket socket;
+    public  boolean connection_state = false;
 
-    public static void main(String[] args){
-        while (!connection_state) {
-            connect();                          //调用下面的方法向服务器请求连接
-            try {
-                Thread.sleep(3000);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-    }
+//    public static void main(String[] args){
+//        while (!connection_state) {
+//            connect();                          //调用下面的方法向服务器请求连接
+//            try {
+//                Thread.sleep(3000);
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
-    private static void connect(){
+    public void connect(){
         try {
-            socket = new Socket("Server的ip", 00000);
+            socket = new Socket("192.168.1.9",20000);
+            System.out.println("OK");
             connection_state = true;
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
@@ -36,17 +37,16 @@ public class Client {
             connection_state = false;
         }
     }
-    public static void reconnect(){
-        while (!connection_state){
+
+    public void reconnect(){
             System.out.println("正在尝试重新链接.....");
-            connect();
             try {
+                connect();
                 Thread.sleep(3000);
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
-    }
 }
 class Client_listen implements Runnable{
     private Socket socket;
@@ -78,26 +78,18 @@ class Client_send implements Runnable{
     }
     @Override
     public void run(){
-        Scanner scanner = new Scanner(System.in);
         try {
-            while (true){
-                int X = MyView.returnbirdx();
-                int Y = MyView.returnbirdy();
-                JSONObject object = new JSONObject();
-                object.put("鸟的x坐标",X);
-                object.put("鸟的y坐标",Y);
-                oos.writeObject(object);                            //向服务器发送位置坐标
-                oos.flush();
-            }
+//            while (true){
+//                int X = MyView.returnBirdX();
+//                int Y = MyView.returnBirdY();
+//                JSONObject object = new JSONObject();
+//                object.put("鸟的x坐标",X);
+//                object.put("鸟的y坐标",Y);
+//                oos.writeObject(object);                            //向服务器发送位置坐标
+//                oos.flush();
+//            }
         }catch (Exception e){
             e.printStackTrace();
-            try {
-                socket.close();
-                Client.connection_state = false;
-                Client.reconnect();
-            }catch (Exception ee){
-                ee.printStackTrace();
-            }
         }
     }
 }
