@@ -1,5 +1,17 @@
 # Flappy Bird Online
+
+![xsn2](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn2.png)![xsn1](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn1.png)![xsn2](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn2.png)![xsn3](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn3.png)![xsn2](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn2.png)![xsn1](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn1.png)![xsn2](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn2.png)![xsn3](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn3.png)![xsn2](https://raw.githubusercontent.com/NENU-A624/FlappyBirdOnline/master/app/src/main/res/mipmap-mdpi/xsn2.png)
+
+> **Github repository**: https://github.com/NENU-A624/FlappyBirdOnline
+
+ >
+This project follows the MIT open-source licence. Permissions for including but not limited to commercial using, modification, distribution or just private using.
+
 Flappy bird -- which game was once popular all over the world as a leisure type, also as the first development project for many game engineers, was a **single-player** game. In this project, we made efforts to make it available and play with one another **online**.
+
+The game is very simple to play, as those traditional versions, you just need to click on the screen, and operate the bird to fly over, more fittingly, go through the pipes which appear from upper and lower edges of the screen to make a higher score. The difference is that this is not a single game, you can control your own birds and compete with other players, actually. But, you must ensure that your client(a real phone or virtual device) can connect to a server  device that deploys the server side of the project, otherwise the game will **never** start, just like the Genshin Impact!(Haha~, this is a little guilty treasure of developers. I believe you won't mind, right?)
+
+![Genshin Impact](E:/23302/CloudLake/FlappyBirdOnline/README/Genshin%20Impact.png)
 
 ## Members(In lexicographic order, name from Github):
 
@@ -33,9 +45,15 @@ Flappy bird -- which game was once popular all over the world as a leisure type,
 
 ## About project working progress
 
-### 1.Draw View
+### 1.Draw View & Play Sound
 
-It's very easy. There's nothing to say.
+It's very easy. There's nothing to say. Detailed notes have been made in the program, instead of here.
+
+If you don't feel noisy, you can add the audio resource class reserved in the program by yourself.
+
+But I prefer to be a silent bird:)
+
+![cheems](E:/23302/CloudLake/FlappyBirdOnline/README/cheems.png)
 
 ------
 
